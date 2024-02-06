@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style2.css">
+        <script src="./scripts/app.js"></script>
+        <title>Decodificador de Texto</title>
+    </head>
+    <body>
+        <header></header>
+        <main class="principal">
+            <div class="container__A">
+                <img class="logo__alura" src="./assets/Logo.svg" alt="Logo alura">
+                <section class="principal__inserir__texto">
+                    <textarea id="texto__entrada" rows="5" cols="30"
+                    onclick="clearTextArea()">Digite seu texto</textarea>
+                    <div class="container__mensagem__validacao">
+                        <img class="icone__validacao" src="./assets/bi_exclamation-circle-fill.svg" alt="Icone">
+                        <label for="texto__entrada">Apenas letras minusculas e sem acento</label>
+                    </div>
+                    <div class="principal__inserir__texto__bts">
+                        <button class="botao__criptografar" type="button" onclick="encodeText()">Criptografar</button>
+                        <button class="botao__descriptografar" type="button" onclick="decodeText()" disabled>Descriptografar</button>
+                    </div>
+                </section>
+            </div>
+            <section class="principal__apresentar__texto">
+                <div class="apresentar__resultado">
+                    <img class= "apresentar__imagem" src="./assets/sem_mensagem.svg">
+                    <p class="apresentar__mensagem1">Nenhuma mensagem encontrada. </p>
+                    <p class="apresentar__mensagem2">
+                        Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
+                </div>
+                <div class="container__botao__copiar">
+                    <button class="botao__copiar" type="button" onclick="copyText()" disabled>Copiar</button>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p>Raimundo Azevedo Neto. 2024.</p>
+        </footer>
+    </body>
+</html>
